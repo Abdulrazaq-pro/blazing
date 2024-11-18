@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" src="/main.js" defer></script>
+    <!-- Include ApexCharts via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .sidebar-active {
+        transform: translateX(0);
+      }
+      .sidebar-inactive {
+        transform: translateX(-100%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Breadcrumb -->
+    <div
+      class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 lg:px-8 lg:hidden dark:bg-neutral-800 dark:border-neutral-700"
+    >
+      <div class="flex justify-between px-2 py-2 z-40">
+        <!-- Navigation Toggle -->
+        <a href="javascript:void(0)" id="menuToggle">Menu</a>
+        <!-- End Navigation Toggle -->
+
+        <!-- Breadcrumb -->
+        <div>Breadcrumb</div>
+        <!-- End Breadcrumb -->
+      </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="sidebar-inactive fixed inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 w-64 h-full transition-transform duration-300 lg:block dark:bg-neutral-800 dark:border-neutral-700"
+      role="dialog"
+      tabindex="-1"
+      aria-label="Sidebar"
+    >
+      <div class="relative flex flex-col h-full max-h-full">
+        <div class="px-6 pt-4">
+          <!-- Logo -->
+          <a
+            class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
+            href="#"
+            aria-label="Logo"
+          >
+            Logo
+          </a>
+          <!-- End Logo -->
+        </div>
+
+        <!-- Content -->
+        <div class="h-full overflow-y-auto">
+          <nav class="p-3 w-full flex flex-col flex-wrap">
+            <ul class="flex flex-col space-y-1">
+              <li>
+                <a
+                  class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:bg-neutral-700 dark:text-white"
+                  href="#"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:bg-neutral-700 dark:text-white"
+                  href="#"
+                >
+                  Dashboard 2
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- End Content -->
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Content -->
+    <div id="main-content" class="w-full pt-3 px-4 sm:px-6 md:px-8 lg:pl-72">
+      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <h4 class="text-xl dark:text-white py-2">
+          Welcome! Here's your summary
+        </h4>
+        <!-- Content goes here -->
+      </div>
+    </div>
+    <!-- End Content -->
+    
+    <script>
+      document.getElementById('menuToggle').addEventListener('click', function () {
+        var sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('sidebar-active');
+        sidebar.classList.toggle('sidebar-inactive');
+      });
+    </script>
+  </body>
+</html>

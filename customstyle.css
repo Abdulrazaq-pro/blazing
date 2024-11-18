@@ -1,0 +1,62 @@
+.text-teal-800{
+    color: teal;
+    
+}
+.bg-teal-100{
+    background: rgba(2, 110, 110, 0.164);
+}
+.bg-red-100{
+    background: rgba(255, 0, 0, 0.151);
+}
+    .text-red-800{
+color: rgba(255, 0, 0, 0.925);
+    }
+
+
+/* Collapsed Sidebar Styling */
+/* Default sidebar width */
+/* Default sidebar width */
+#sidebar {
+    width: 260px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Collapsed sidebar styling */
+/* Default sidebar width */
+#sidebar {
+    width: 260px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Collapsed sidebar styling */
+  #sidebar.collapsed {
+    width: 80px; /* Force sidebar width to 80px */
+  }
+  
+  /* Center content and remove extra padding in collapsed state */
+  #sidebar.collapsed .text-label {
+    display: none; /* Hide text labels */
+  }
+  
+  #sidebar.collapsed .sidebar-item {
+    justify-content: center; /* Center icons */
+    padding: 10px 0; /* Adjust padding for smaller width */
+    max-width: 80px; /* Ensure items fit within 80px width */
+  }
+  
+  /* Set items to shrink properly within 80px */
+  #sidebar.collapsed .sidebar-item img {
+    margin: 0 auto; /* Center the icon */
+  }
+  
+  #sidebar .sidebar-item {
+    padding: 8px 16px;
+    transition: padding 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+
+ 
